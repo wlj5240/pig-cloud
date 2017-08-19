@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 /**
  * <p>
  * 前端控制器
@@ -37,6 +39,11 @@ public class BizUserController {
     @RequestMapping("/get/{id}")
     public BizUser getUser(@PathVariable Integer id) {
         return userService.selectById(id);
+    }
+
+    @RequestMapping("/getUserScore")
+    public List<BizUser> getUserScore(){
+        return userService.findUserAndScoreById();
     }
 
     @RequestMapping("/del/{id}")

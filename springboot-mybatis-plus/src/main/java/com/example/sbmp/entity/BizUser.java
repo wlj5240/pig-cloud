@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableName;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * <p>
@@ -25,6 +26,7 @@ public class BizUser extends Model<BizUser> {
 	private Integer id;
 	private String username;
 	private String password;
+	private List<BizScore> scoreList;
 
 
 	public Integer getId() {
@@ -49,6 +51,14 @@ public class BizUser extends Model<BizUser> {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public List<BizScore> getScoreList() {
+		return scoreList;
+	}
+
+	public void setScoreList(List<BizScore> scoreList) {
+		this.scoreList = scoreList;
 	}
 
 	@Override
