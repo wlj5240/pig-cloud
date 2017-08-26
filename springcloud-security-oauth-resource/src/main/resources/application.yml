@@ -1,0 +1,24 @@
+server:
+  port: 7000
+  context-path: /demo
+
+spring:
+  application:
+    name: resource-server
+
+eureka:
+ client:
+   serviceUrl:
+     defaultZone: http://eureka.didispace.com/eureka/
+
+security:
+  sessions: stateless
+  oauth2:
+    client:
+      id: resource-server
+      client-secret: root
+    resource:
+      loadBalanced: true #必须要有
+      id: resource-server
+      user-info-uri: http://localhost:8000/uaa/user
+      prefer-token-info: false
