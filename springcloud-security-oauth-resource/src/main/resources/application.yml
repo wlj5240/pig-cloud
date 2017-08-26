@@ -18,7 +18,6 @@ security:
       id: resource-server
       client-secret: root
     resource:
-      loadBalanced: true #必须要有
       id: resource-server
       user-info-uri: http://localhost:8000/uaa/user
       prefer-token-info: false
