@@ -26,8 +26,7 @@ class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
     }
     @Override
     public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
-        oauthServer
-                .tokenKeyAccess("permitAll()");//公开/oauth/token的接口
+        oauthServer.tokenKeyAccess("permitAll()");
     }
 
     @Override

@@ -11,10 +11,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 
 import javax.sql.DataSource;
 
-/**
- * @author 武继明 [wzslw@163.com]
- * @since 16-11-25 上午9:30
- */
 @Configuration
 @EnableWebSecurity
 class WebSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -31,9 +27,5 @@ class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.anonymous().disable()
                 .authorizeRequests()
                 .anyRequest().authenticated();
-    }
-    @Override
-    public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/hystrix.stream/**", "/info", "/error");
     }
 }

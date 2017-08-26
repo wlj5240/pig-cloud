@@ -20,9 +20,7 @@ public class ResourceApplication {
     public static void main(String[] args) {
         SpringApplication.run(ResourceApplication.class, args);
     }
-
     @Bean
-//必须要有 否则oauth2不可以通过loadbalance获取user
     LoadBalancerInterceptor loadBalancerInterceptor(LoadBalancerClient loadBalance) {
         return new LoadBalancerInterceptor(loadBalance);
     }
