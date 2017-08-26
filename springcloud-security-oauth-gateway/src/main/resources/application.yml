@@ -1,9 +1,9 @@
 server:
-  port: 8000
+  port: 6666
 
 spring:
   application:
-    name: api-gateway
+    name: gateway-server
 
 eureka:
   client:

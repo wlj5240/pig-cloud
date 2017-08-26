@@ -16,10 +16,7 @@ import java.security.Principal;
 @EnableResourceServer
 public class AuthServerApplication {
 
-	@RequestMapping("/user")
-	public Principal user(Principal user) {
-		return user;
-	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(AuthServerApplication.class, args);
 	}

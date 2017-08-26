@@ -3,7 +3,10 @@ package com.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerInterceptor;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 
 /**
@@ -16,5 +19,11 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 public class ResourceApplication {
     public static void main(String[] args) {
         SpringApplication.run(ResourceApplication.class, args);
+    }
+
+    @Bean
+//必须要有 否则oauth2不可以通过loadbalance获取user
+    LoadBalancerInterceptor loadBalancerInterceptor(LoadBalancerClient loadBalance) {
+        return new LoadBalancerInterceptor(loadBalance);
     }
 }

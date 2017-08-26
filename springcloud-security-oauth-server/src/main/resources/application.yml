@@ -3,7 +3,7 @@ spring:
     name: auth-server
 
 server:
-  port: 9000
+  port: 7777
   context-path: /uaa
 security:
   sessions: stateless
