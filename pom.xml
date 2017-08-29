@@ -18,6 +18,7 @@
   <modules>
     <module>springboot-mybatis-plus</module>
 	<module>springboot-session</module>
+	<module>springboot-redis-rate-limiter</module>
     <module>springboot-security</module>
     <module>springboot-security-jwt</module>
     <module>springcloud-zuul-jwt</module>
