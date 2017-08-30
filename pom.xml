@@ -25,6 +25,9 @@
     <module>springcloud-security-oauth-server</module>
     <module>springcloud-security-oauth-gateway</module>
     <module>springcloud-security-oauth-resource</module>
+    <module>springcloud-service-consumer</module>
+    <module>springcloud-service-provider</module>
+    <module>springcloud-service-consumer-ribbon</module>
   </modules>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
