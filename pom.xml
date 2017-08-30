@@ -33,6 +33,9 @@
     <module>springcloud-config-client</module>
     <module>springcloud-config-serverxx</module>
     <module>springcloud-config-clientxx</module>
+    <module>springcloud-service-consumer-ribbon-hystrix</module>
+    <module>springcloud-service-consumer-hystrix-dashboard</module>
+    <module>springcloud-service-consumer-hystrix-tubine</module>
   </modules>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

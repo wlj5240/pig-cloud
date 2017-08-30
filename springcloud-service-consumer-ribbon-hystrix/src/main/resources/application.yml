@@ -1,9 +1,9 @@
 server:
-  port: 8083
+  port: 8081
 
 spring:
   application:
-    name: CONSUMER-SERVICE
+    name: CONSUMER-HYSTRIX-SERVICE
 
 eureka:
   client:
