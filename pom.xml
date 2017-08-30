@@ -28,6 +28,11 @@
     <module>springcloud-service-consumer</module>
     <module>springcloud-service-provider</module>
     <module>springcloud-service-consumer-ribbon</module>
+    <module>springcloud-service-consumer-feign</module>
+    <module>springcloud-config-server</module>
+    <module>springcloud-config-client</module>
+    <module>springcloud-config-serverxx</module>
+    <module>springcloud-config-clientxx</module>
   </modules>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
