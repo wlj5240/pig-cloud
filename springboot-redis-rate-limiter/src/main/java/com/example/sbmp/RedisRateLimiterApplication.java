@@ -49,6 +49,7 @@ public class RedisRateLimiterApplication {
                             return false;
                         }
                         logger.debug("token -> {}",token);
+                        jedis.close();
                     }
                     return true;
                 }
