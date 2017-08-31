@@ -39,16 +39,16 @@ public class RedisRateLimiterApplication {
                     Method method = handlerMethod.getMethod();
                     RateLimiter rateLimiter = method.getAnnotation(RateLimiter.class);
 
-                    if (rateLimiter != null){
+                    if (rateLimiter != null) {
                         int limit = rateLimiter.limit();
                         int timeout = rateLimiter.timeout();
                         Jedis jedis = jedisPool.getResource();
-                        String token = RedisRateLimiter.acquireTokenFromBucket(jedis, limit, timeout);
+                        String token = RedisRateLimiter.acquireTokenFromBucket(jedis, method.getName(), limit, timeout);
                         if (token == null) {
                             response.sendError(500);
                             return false;
                         }
-                        logger.debug("token -> {}",token);
+                        logger.debug("token -> {}", token);
                         jedis.close();
                     }
                     return true;

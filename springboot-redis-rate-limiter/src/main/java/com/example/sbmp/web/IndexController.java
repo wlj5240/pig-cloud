@@ -16,9 +16,14 @@ import org.springframework.web.bind.annotation.RestController;
 @SuppressWarnings("unused")
 @RestController
 public class IndexController {
-    @RateLimiter(limit = 2, timeout = 5000)
+    @RateLimiter(limit = 2, timeout = 10000)
     @GetMapping("/test")
     public void test() {
+    }
+
+    @RateLimiter(limit = 2, timeout = 5000)
+    @GetMapping("/test2")
+    public void test2() {
     }
 
 }
