@@ -4,11 +4,16 @@ server:
 spring:
   application:
     name: PROVIDER-SERVICE
+  http:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 1000MB
 
 eureka:
   client:
     service-url:
       defaultZone: http://eureka.didispace.com/eureka/
+
 
 logging:
   config: classpath:logback.xml
