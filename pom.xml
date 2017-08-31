@@ -36,6 +36,7 @@
     <module>springcloud-service-consumer-ribbon-hystrix</module>
     <module>springcloud-service-consumer-hystrix-dashboard</module>
     <module>springcloud-service-consumer-hystrix-tubine</module>
+    <module>springcloud-zuul-gateway</module>
   </modules>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
