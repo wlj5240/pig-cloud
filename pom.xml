@@ -18,6 +18,9 @@
   <modules>
     <module>springboot-mybatis-plus</module>
 	<module>springboot-session</module>
+    <module>springboot-rabbitmq</module>
+    <module>springboot-admin-server</module>
+    <module>springboot-admin-client</module>
 	<module>springboot-redis-rate-limiter</module>
     <module>springboot-security</module>
     <module>springboot-security-jwt</module>
