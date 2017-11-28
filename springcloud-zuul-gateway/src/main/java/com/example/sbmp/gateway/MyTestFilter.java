@@ -1,14 +1,15 @@
 package com.example.sbmp.gateway;
 
 import com.netflix.zuul.ZuulFilter;
-import org.springframework.stereotype.Component;
+import com.netflix.zuul.context.RequestContext;
+
+import javax.servlet.http.HttpSession;
 
 /**
  * @email wangiegie@gmail.com
  * @data 2017-08
  */
-@Component
-public class MyTestFilter extends ZuulFilter{
+public class MyTestFilter extends ZuulFilter {
     @Override
     public String filterType() {
         return "pre";
@@ -26,7 +27,9 @@ public class MyTestFilter extends ZuulFilter{
 
     @Override
     public Object run() {
-        System.out.println("--------------------------------->");
+        RequestContext context = RequestContext.getCurrentContext();
+
+        HttpSession httpSession = context.getRequest().getSession();
         return null;
     }
 }

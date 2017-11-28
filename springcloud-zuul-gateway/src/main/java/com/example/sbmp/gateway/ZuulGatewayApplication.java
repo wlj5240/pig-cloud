@@ -16,8 +16,8 @@ public class ZuulGatewayApplication {
 		SpringApplication.run(ZuulGatewayApplication.class, args);
 	}
 
-//	@Bean
-//	public MyTestFilter testFilter(){
-//		return new MyTestFilter();
-//	}
+	@Bean
+	public MyTestFilter testFilter(){
+		return new MyTestFilter();
+	}
 }

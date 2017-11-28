@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
 
@@ -23,16 +26,20 @@ import java.io.IOException;
 @RestController
 public class ProviderController {
     @GetMapping("/test")
-    public String test() {
-        int i = 1/ 0;
-        return "PROVIDER";
+    public String test(HttpServletRequest request, HttpSession session) {
+        return session.getId();
     }
 
-    @RequestMapping(value = "/upload",method = RequestMethod.POST)
-    public String uploadFile(MultipartFile file) throws Exception{
+    @GetMapping("/tt")
+    public String test1(HttpSession session) {
+        return session.getAttribute("123") + "";
+    }
+
+    @RequestMapping(value = "/upload", method = RequestMethod.POST)
+    public String uploadFile(MultipartFile file) throws Exception {
         byte[] bytes = file.getBytes();
         File fileTosave = new File(file.getOriginalFilename());
-        FileCopyUtils.copy(bytes,fileTosave);
+        FileCopyUtils.copy(bytes, fileTosave);
         return fileTosave.getAbsolutePath();
     }
 }

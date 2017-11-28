@@ -25,6 +25,7 @@
     <module>springboot-security</module>
     <module>springboot-security-jwt</module>
     <module>springcloud-zuul-jwt</module>
+    <module>springcloud-eureka-server</module>
     <module>springcloud-security-oauth-server</module>
     <module>springcloud-security-oauth-gateway</module>
     <module>springcloud-security-oauth-resource</module>
